@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ProTask V2 – Smart Stylish To-Do App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container glass">
+    <h1>🎯 TO-DO List</h1>
+
+    <div class="task-input">
+      <input type="text" id="taskInput" placeholder="What's your goal?" />
+      <input type="datetime-local" id="taskTime" />
+      <button onclick="addTask()">✨ Add</button>
+    </div>
+
+    <div id="quoteBox"></div>
+    <div id="progress"></div>
+    <ul id="taskList"></ul>
+    <div id="completedQuote" class="quote-box"></div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

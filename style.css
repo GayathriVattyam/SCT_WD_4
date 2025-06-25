@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #10131c;
+  color: #f2f2f2;
+}
+
+.container {
+  max-width: 600px;
+  margin: 60px auto;
+  padding: 30px;
+  background: #1a1d2e;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(50, 200, 255, 0.2);
+}
+
+h1 {
+  text-align: center;
+  color: #6cf5e8;
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+}
+
+.task-input {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.task-input input,
+.task-input button {
+  padding: 14px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  outline: none;
+}
+
+.task-input input {
+  background: #2a2f45;
+  color: #f2f2f2;
+  border: 1px solid #444;
+}
+
+.task-input input::placeholder {
+  color: #bbb;
+}
+
+button {
+  background: linear-gradient(to right, #6cf5e8, #34ace0);
+  color: #0a0a0a;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: scale(1.05);
+  background: linear-gradient(to right, #47e5bc, #34ace0);
+}
+
+#quoteBox {
+  margin: 16px 0;
+  font-style: italic;
+  color: #a1f0ec;
+  text-align: center;
+}
+
+#progress {
+  height: 10px;
+  background: #2f354d;
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 20px 0;
+}
+
+#progressBar {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(to right, #00f0ff, #6cf5e8);
+  transition: width 0.4s;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  background: #232843;
+  padding: 15px;
+  margin-bottom: 12px;
+  border-radius: 10px;
+  border-left: 4px solid #6cf5e8;
+  position: relative;
+  transition: 0.3s;
+}
+
+li.done {
+  text-decoration: line-through;
+  color: #999;
+  border-left-color: #888;
+}
+
+li.today::after {
+  content: "🔥 Due Today";
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 12px;
+  background: #ff6363;
+  color: white;
+  padding: 3px 6px;
+  border-radius: 6px;
+}
+
+li button {
+  margin-top: 10px;
+  margin-right: 10px;
+  padding: 6px 12px;
+  font-size: 14px;
+  border: none;
+  border-radius: 6px;
+  background: #6cf5e8;
+  color: #0a0a0a;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+li button:hover {
+  background: #47e5bc;
+}
+
+.quote-box {
+  margin-top: 25px;
+  padding: 12px;
+  background: #1c2236;
+  border-left: 5px solid #34ace0;
+  border-radius: 8px;
+  text-align: center;
+  font-style: italic;
+  color: #b0f9f3;
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
